@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+        <h1>Расчет стоимости заказа</h1>
+      </div>
+
+      <form th:action="@{calculate}" th:object="${addition}" method="post">
+        <div>
+          <lab>Расстояние до ресторана</lab>
+          <input type="number" step="any" id="distanceToRestaurant" class="from-control" name="distanceToRestaurant">
+        </div>
+
+        <div>
+          <label>Расстояние от ресторана до клиента</label>
+          <input type="number" step="any" id="distanceToCustomer" class="from-control" name="distanceToCustomer">
+        </div>
+
+        <div>
+          <input type="submit" value="Рассчитать">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
