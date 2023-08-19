@@ -29,10 +29,10 @@ public class Addition {
 
     public String getShippingPrice() {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        return decimalFormat.format(getFullDistance() * 3 * getDemandFactor());
+        return decimalFormat.format(getFullDistance() * 15 * getDemandFactor());
     }
 
     public double getDemandFactor() {
-        return ThreadLocalRandom.current().nextDouble(1, 3);
+        return ThreadLocalRandom.current().nextDouble(1.1, 3);
     }
 }
